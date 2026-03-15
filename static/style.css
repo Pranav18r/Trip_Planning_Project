@@ -1,0 +1,155 @@
+/* Suggestions Popup Modernization */
+.suggestions-v2 {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    z-index: 1000;
+    max-height: 280px;
+    overflow-y: auto;
+    display: none;
+    animation: animate__fadeIn animate__faster;
+}
+
+.suggestion-item-v2 {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(241, 245, 249, 0.5);
+    font-size: 0.85rem;
+    color: #475569;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.suggestion-thumb {
+    width: 48px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #f1f5f9;
+}
+
+.vehicle-preview-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+}
+
+.suggestion-item-v2:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item-v2:hover {
+    background-color: #f8fafc;
+    color: #4f46e5;
+    padding-left: 1.5rem;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+}
+
+/* Leaflet Overrides for Premium Look */
+.leaflet-container {
+    background: #f1f5f9 !important;
+}
+
+.leaflet-routing-container {
+    width: 100% !important;
+    max-width: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: inherit !important;
+}
+
+.leaflet-routing-alt {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.leaflet-routing-alt table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.leaflet-routing-alt tr {
+    background: white;
+    border-radius: 1rem;
+    transition: transform 0.2s;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.leaflet-routing-alt tr:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.leaflet-routing-alt td {
+    padding: 1rem !important;
+    border: 1px solid #f1f5f9;
+}
+
+.leaflet-routing-alt td:first-child {
+    border-radius: 1rem 0 0 1rem;
+    border-right: none;
+}
+
+.leaflet-routing-alt td:last-child {
+    border-radius: 0 1rem 1rem 0;
+    border-left: none;
+}
+
+.leaflet-routing-icon {
+    filter: hue-rotate(220deg) brightness(0.8);
+}
+
+.leaflet-bar {
+    border: none !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important;
+}
+
+.leaflet-bar a {
+    background-color: white !important;
+    color: #475569 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.leaflet-bar a:hover {
+    background-color: #f8fafc !important;
+    color: #4f46e5 !important;
+}
+
+/* Custom Marker Styling Simulation */
+.leaflet-marker-icon {
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
